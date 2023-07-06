@@ -1,5 +1,9 @@
 homepage: "https://www.start.io"
 documentation: "https://github.com/startappdev/startio-pixel-gtm/wiki/Implementing-the-Start.io-Pixel-Using-Google-Tag-Manager"
 versions:
+  # Latest version
+  - sha: 34d25b8716d8a1b092d3b53bb6635241e4795b12
+    changeNotes: Update template
+  # Older versions
   - sha: 6c68ae95a40bacc6a59a8020ed1f6c6d134347f0
     changeNotes: Initial release.
