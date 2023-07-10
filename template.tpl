@@ -87,6 +87,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "adClick",
         "displayValue": "Ad Click"
+      },
+      {
+        "value": "pageview",
+        "displayValue": "Page View"
       }
     ],
     "simpleValueType": true,
@@ -302,6 +306,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 7/6/2023, 11:20:52 AM
+Created on 7/10/2023, 10:46:10 AM
 
 
