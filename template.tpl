@@ -91,6 +91,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "pageview",
         "displayValue": "Page View"
+      },
+      {
+        "value": "custom",
+        "displayValue": "[Custom]"
       }
     ],
     "simpleValueType": true,
@@ -100,6 +104,39 @@ ___TEMPLATE_PARAMETERS___
         "paramName": "tagType",
         "paramValue": "event",
         "type": "EQUALS"
+      }
+    ],
+    "subParams": [
+      {
+        "type": "TEXT",
+        "name": "customEventName",
+        "displayName": "Custom Event Name",
+        "simpleValueType": true,
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY"
+          },
+          {
+            "type": "REGEX",
+            "args": [
+              "^[a-zA-Z0-9_-]+$"
+            ]
+          },
+          {
+            "type": "STRING_LENGTH",
+            "args": [
+              2,
+              30
+            ]
+          }
+        ],
+        "enablingConditions": [
+          {
+            "paramName": "eventType",
+            "paramValue": "custom",
+            "type": "EQUALS"
+          }
+        ]
       }
     ]
   },
@@ -167,7 +204,7 @@ let _sio = copyFromWindow('_sio');
 
 const accountId = data.accountId;
 const tagType = data.tagType;
-const eventName = data.eventType;
+const eventName = data.eventType === 'custom' ? data.customEventName : data.eventType;
 const customParams = data.customParams ? makeTableMap(data.customParams, 'key', 'value') : {};
 
 if (tagType === 'pageview') {
@@ -306,6 +343,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 7/11/2023, 2:40:30 PM
+Created on 7/19/2023, 9:55:38 AM
 
 
