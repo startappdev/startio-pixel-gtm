@@ -2,9 +2,11 @@ homepage: "https://www.start.io"
 documentation: "https://github.com/startappdev/startio-pixel-gtm/wiki/Implementing-the-Start.io-Pixel-Using-Google-Tag-Manager"
 versions:
   # Latest version
+  - sha: 2ad538ccb88e2225b1519f044aa3171fb58cebf9
+    changeNotes: Support custom events
+  # Older versions
   - sha: 00407b9e68e68719a4c1efcf56e9dd737f0ebec0
     changeNotes: Update description
-  # Older versions
   - sha: d5846ebe5750a670de58d2db48b0a6ccb81e9b87
     changeNotes: Add Page View event
   - sha: 34d25b8716d8a1b092d3b53bb6635241e4795b12
